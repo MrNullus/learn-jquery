@@ -1,2 +1,1 @@
-# learn-jquery
-Learn JQuery
+# Learn JQuery
