@@ -4,20 +4,67 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Learn JQuery - Lógica de Desenvolvimento em JQuery</title>
+		<style type="text/css">
+			body { letter-spacing: 1pt; color: black }
+			h1 {
+				font-size: 36px;
+				text-align: center;
+			}
+			a {
+				font-size: 18px;
+			}
+		</style>
 
-		<script src="./js/jquery.min.js"></script>
+		<script src="./js/jquery.js"></script>
 		<script>
 			$( document ).ready(function () {
+				
+				/*
+				*>> Individualmente				
+
 				$( 'h1' ).css("color", "#f66");
+				$( 'h1' ).hide();
+				$( 'h1' ).delay('1000');
+				$( 'h1' ).fadeIn('slow');
+				$( 'h1' ).text('Learn JQuery in DevPunk');
+				*/
+
+				/*
+				*>> Inline
+
+				$( 'h1' ).css("color", "#f66").hide().delay('1000').fadeIn('slow').text('Learn JQuery in DevPunk');
+				*/
+
+				/*
+				*>> Bloco
+				*/	
+				$( '*' ).css({ fontFamily: 'Roboto, cursive' });
+				$( 'body' ).css("background", "#333");
+
+				$( 'h1' )
+					.css("color", "#97f")
+					.hide()
+					.delay('1000')
+					.fadeIn('slow')
+					.text('Learn JQuery in DevPunk')
+					.click(function () {
+						alert("HEELO DARK HELL!!!");
+						$( 'body' ).css("background", "#262626");
+						$( 'h1' ).css("color", "#fff");
+					});
+
+				$( 'a' ).css({ color: "#9ff", textDecoration: 'underline' });
+				$('.link2').css({ color: "lime" });
+				$('#link3').css({ color: "#fff" });
 			});
 		</script>
 	</head>
 
 	<body>
-		<h1>Dev Punk Inscreva-se</h1>	
+		<h1>DevPunk Inscreva-se</h1>	
 
-		<a href="#">Link 1</a>
-		<a href="#" class="link2">Link 2</a>
-		<a href="#" id="link3">Link 3</a>
+		[<a href="#">Link 1</a>]
+		[<a href="#" class="link2">Link 2</a>]
+		[<a href="#" id="link3">Link 3</a>]
 	</body>
 </html>
