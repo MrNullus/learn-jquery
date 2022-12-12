@@ -52,7 +52,7 @@ $(function () {
 			qtdeEntradasMouseEv7++;
 			ex.text(`Mouse Over: ${qtdeEntradasMouseEv7}`);
 		})
-		.mouseout(function () {
+		.mouseleave(function () {
 			ex.text("Mouse Leave");
 		});
 
@@ -60,6 +60,6 @@ $(function () {
 		let localX = move.pageX();
 		let localY = move.pageY();
 
-		ex.text(`Movimento X: ${}px | Movimento Y: ${}px` );
+		ex.text(`Movimento X: ${localX}px | Movimento Y: ${localY}px` );
 	});
 });
