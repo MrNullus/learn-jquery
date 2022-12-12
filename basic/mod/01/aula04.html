@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Learn JQuery - Seletores Hierárquicos</title>
+
+		<script src="./js/jquery.js"></script>
+		<script>
+			$( document ).ready(function () {
+				$('h2').css('margin', '0');
+				$('p').css({ 'margin-bottom': 20px, color: 'lime' });
+				$('.div1').css({ 'margin-botom': '20px', bakground: '#ccc' });
+
+				// -> Selecionando elememtos filhos
+				$('.div1 span').hide().css('color', '#262727').fadeIn(800);
+				$('.div1 p').hide().css('color', 'black').fadeIn(1000);
+
+				// -> Selecionando filhos diretos do elemento
+				$('.div1 > span').css({ color: 'red' });
+
+				// -> Selecionando o primeiro elemento após o selecionado
+				$('.p1 + p').css({ fontSize: '25px' });
+
+				// -> Selecionando todos os elemento após o selecionado
+				$('.p1 ~ p').css({ fontWeight: '400' });
+			});
+		</script>
+	</head>
+
+	<body>
+		<h1>DevPunk Inscreva-se</h1>	
+		<div class="div1">
+			<h2>h2 filho direto da div1</h2>
+			<p>p filho direto da div1 <span>span filho do p</span></p>
+			<span>span filho direto da div1</span>
+		</div>
+
+		<h2>h1 fora da div1</h2>
+		<p class="p1">p1 fora da div1</p>
+		<p>p2 fora da div1</p>
+		<p>p3 fora da div1</p>
+	</body>
+</html>
