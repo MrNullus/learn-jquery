@@ -9,6 +9,13 @@ body {
 	color: #fff;
 }
 
+label {
+	display: block;
+	margin: 10px 0;
+	padding: 10px;
+	background-color: #f8f8ff;
+}
+
 p, 
 input {
 	width: 480px;
@@ -18,4 +25,13 @@ input {
 	color: #fff;
 	border: 5px solid #ccc;
 	text-align: center;
+}
+
+textarea {
+	padding: 5px;
+	width: 450px;
+}
+
+button {
+	width: 465px;
 }
