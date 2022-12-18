@@ -43,4 +43,18 @@ $(function () {
 		ex.text(`Saída do campo: ${$(this).attr('name')}`)
 	});
 
+	$('.ev1').change(function () {
+		ex.text(`Campo Alterado: ${$(this).val()}`)
+	});
+
+	$('.selecionar').click(function () {
+		// -> irá selecionar o texto do inputs
+		$('.ev3').select();
+
+		$('form').submit(function () {
+			// -> fará com que o submit não sejá enviado
+			return false;
+		});
+	});
+
 });

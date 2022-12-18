@@ -88,4 +88,46 @@
 ### Fórmulario
 **Exemplos: **
 
+- **Primeiro exemplo:**
+	```js
+	let ex = $('.ex1');
 
+	$('.ev1')
+		.focus(function () {
+			ex.text($(this).attr('title'));
+		})
+		.keyup(function () {
+			if ($(this).val() == 'pontocom') {
+				$('.ev2').focus();
+			}
+		});
+	```
+
+- **Segundo exemplo:**
+	```js
+	// será executado callback assim que houver mudança, ou seja, 
+	// ¬ assim que mudar o conteudo do input, ele vai chamar a função passada
+	$('.ev1').change(function () {
+		ex.text(`Campo Alterado: ${$(this).val()}`)
+	});
+	```
+
+- **Terceiro exemplo:**
+	```js
+	$('.ev2').blur(function () {
+		ex.text(`Saída do campo: ${$(this).attr('name')}`)
+	});
+	```
+
+- **Quarto exemplo:**
+	```js
+	$('.selecionar').click(function () {
+		// -> irá selecionar o texto do input
+		$('.ev3').select();
+
+		$('form').submit(function () {
+			// -> fará com que o submit não sejá enviado
+			return false;
+		});
+	});
+	```
