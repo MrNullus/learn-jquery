@@ -18,6 +18,6 @@ $(function () {
     ex.fadeTo(3000, 0.8, function () {
       ex2.fadeTo('show', 0.2);
     });
-  })
+  });
 
 });

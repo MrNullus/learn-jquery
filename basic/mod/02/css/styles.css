@@ -1,0 +1,43 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	width: 650px;
+	height: 300px;
+}
+
+#slide {
+	width: 650px;
+	height: 300px;
+	margin: 50px auto;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0px 0px 8px #000;
+}
+
+#slide img {
+	display: none;
+	left: 0;
+	object-fit: cover;
+	position: relative;
+	z-index: 1;
+}
+
+#slide p {
+	z-index: 999;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px;
+	font-family: Arial;
+	font-size: 14px;
+	background: rgba(0, 233, 233, .9);
+	color: #f2f2f2;
+}
+
+img.ativo {
+	display: block;
+}
