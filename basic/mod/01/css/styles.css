@@ -2,11 +2,12 @@ body {
 	font-size: 14px;
 }
 
-.ex1 {
+.ex1, .ex2 {
 	width: 460px;
 	padding: 20px;
 	background: lightskyblue;
 	color: #fff;
+	margin: 12px;
 }
 
 label {
